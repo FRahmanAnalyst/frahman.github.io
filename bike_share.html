@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Bike Share Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Farabi Rahman</a>
+					</header>
+
+				<!-- Nav
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!-- <span class="date">April 25, 2017</span>-->
+									<h1>Bike Share Analysis (Chicago 2019)</h1>
+									<p>Data analysis capstone project for my Google Data Analytics Certificate, <br />
+									where I analyzed how casual riders and annual members use bike share, and <br />
+									their demographics, using bike share data from Chicago for the year 2019.<br />
+									</p>
+								</header>
+								<div class="image main"><img src="images/bike_share.webp" alt="" /></div>
+								<p>The data for the analysis was obtained from the following <a href='https://divvy-tripdata.s3.amazonaws.com/index.html' target="_blank"><b>link</b></a> 
+								which recorded data from 2004 until the first quarter of 2020. From these, the bike share data for the year 2019 was used in the analysis. <br />
+								<p>A new column was created for the trip durations (minutes), which was calculated by subtracting the start time from the end time and converting the result into minutes
+									using the SQL commands below.  </p>
+								<div class="image main"><img src="images/bike_share_05.png" alt="" /></div>
+								<p><a href='/files/bike_share_SQLQuery1.sql' target="_blank">Download SQL Script</a></p>
+								<p>The tables containing data for the four quarters of 2019 were combined using view and union commands in Microsoft SQL Server and then the 
+									relevant columns were chosen.</p>
+								<div class="image main"><img src="images/bike_share_01.png" alt="" /></div>
+								<p><a href='/files/bike_share_combine_tables.sql' target="_blank">Download SQL Script</a></p>
+								<p>Next, the tables were checked for duplicates and missing rows using count command, by checking the number of entries in the table for each 
+								quarter, then matching the aggregate number of entries with the combined table. </p>
+								<div class="image main"><img src="images/bike_share_02.png" alt="" /></div>
+								<p><a href='/files/bike_share_check_dulplicate_using_counts.sql' target="_blank">Download SQL Script</a></p>
+								<p>The following were then extracted from the combined data table with SQL commands, to provide an insight on the bike share patterns and the users: 
+									number of trips each day of the week, number of trips each month, average trip duration each month, number of trips each week by user type and 
+									also the average trip duration each day of the week.</p>
+								<div class="image main"><img src="images/bike_share_03.png" alt="" /></div>
+								<p><a href='/files/bike_share_analysis_2.sql' target="_blank">Download SQL Script</a></p>
+								<p>SQL commands were used to also extract the following information from the data table: bike share use across age groups, bike share use across age 
+									groups in the different user types, number of trips by gender, the number of different user types, the number of different user types by gender, 
+									most used bike share start stations, average trip duration in the different start stations, average trip duration by  user type and gender, and the 
+									number of missing values for gender and birth year across user types. </p>
+								<div class="image main"><img src="images/bike_share_04.png" alt="" /></div>
+								<p><a href='/files/bike_share_analysis_1.sql' target="_blank">Download SQL Script</a></p>
+								<p>The data was then visualized using Tableau Public </p>
+								<div class='tableauPlaceholder' id='viz1629686291522' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;BikeShare_16255154310460&#47;Dashboard&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='BikeShare_16255154310460&#47;Dashboard' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Bi&#47;BikeShare_16255154310460&#47;Dashboard&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1629686291522');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.minHeight='1600px';vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+								<b><p><a href='https://public.tableau.com/views/BikeShare_16255154310460/Dashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link' target="_blank">Tableau Public Page</a></p></b>
+								<p>From the visualizations above, we can infer that overall, more bike share trips occur during the working days than weekends, while casual customers 
+									tend to use bike share more on the weekends while subscribers use it more on the working days. Subscribers make up the overwhelming majority of the 
+									bike trips- more than 75%. More trips occur during the summer months compared to winter months, with July, August and September being the peak months 
+									while almost no trips from November to April. There is no gender data from the casual customers, as compared to the subscribers of whom, the overwhelming 
+									majority is male. As for the age demographics, 24 to 35 year-olds use bike share the most, with the average age of the subscribers being a little higher 
+									than the casual customers.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer 
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>-->
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Movie Attributes</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Farabi Rahman</a>
+					</header>
+
+				<!-- Nav
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!-- <span class="date">April 25, 2017</span>-->
+									<h1>Movie Attributes Correlations</h1>
+									<p>Guided data analysis project to show the correlations between various attributes,<br/> 
+										like budget, year, rating etc. in the movie industry using <b>Python</b>.<br/> 
+										</p>
+								</header>
+								<div class="image main"><img src="images/movies.jpg" alt="" /></div>
+								<p>This data analysis project was done under guidance from <a href='https://www.youtube.com/c/AlexTheAnalyst/' target="_blank">Alex The Analyst’s (Alex Freberg) YouTube channel</a>.  
+									The data for this project was obtained from the <b><a href='https://www.kaggle.com/danielgrijalvas/movies' target="_blank">Movie Industry Dataset in Kaggle.com</a></b><br /></p>
+								
+								<p>First, the pandas, seaborn, numpy, and matplotlib libraries were imported into Python. Then the data was read from the file and a data frame created. Next the data frame was 
+									checked for any missing data as well the data type in each column.</p>
+								<div class="image main"><img src="images/movie_attributes_01.png" alt="" /></div>
+								<p>The budget and the gross columns were changed from float to integer to get rid of the extra zeroes after decimal point. Then a separate year column was created by extracting 
+									the year from the released column after which the data frame was sorted by gross revenue (highest to lowest). Any duplicates were then dropped. Correlation between the following 
+									were then visualized through different scatter plots: budget-gross revenue, score-gross revenue.<br />
+								<div class="image main"><img src="images/movie_attributes_02.png" alt="" /></div>
+								<p>A correlation matrix was created from the data frame, which was then used to create a heatmap to visualize the correlation between all the movie attributes using seaborn. 
+									Then the correlations were unstacked and sorted to show which attributes were the most correlated. <br />
+								<div class="image main"><img src="images/movie_attributes_03.png" alt="" /></div>
+								<p>Finally, the highest correlated (greater than 0.5) pairs of attributes were extracted. <br />
+								<div class="image main"><img src="images/movie_attributes_04.png" alt="" /></div>
+								<b><p><a href='/files/Movie Attributes Correlations.ipynb' target="_blank">Download Jupiter Notebook</a></p></b>
+								<p>According to the Pearson correlation coefficient, votes received by the movies and their budgets had the highest correlation to their gross revenue, 0.712196 and 0.662457, 
+									respectively. </p>
+							</section>
+
+					</div>
+
+				<!-- Footer 
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>-->
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

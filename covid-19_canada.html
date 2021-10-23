@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>COVID-19 Canada</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Farabi Rahman</a>
+					</header>
+
+				<!-- Nav
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>-->
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<!-- <span class="date">April 25, 2017</span>-->
+									<h1>COVID-19 Canada - <br />
+										Vaccinations, Deaths and Infections</h1>
+									<p>Cleaning and joining Covid-19 data in Microsoft SQL Server and visualized in Tableau, <br />
+										to show the timeline and comparison of vaccines, infections and deaths across Canadian <br />
+										provinces and territories, until the first week of July. 
+									</p>
+								</header>
+								<div class="image main"><img src="images/covid-19.jpeg" alt="" /></div>
+								<p>This data analysis project was aimed at comparing and visualizing COVID-19 infections, deaths and vaccinations across Canada up until the first week of July 2021. It compared the infection rates, vaccinations and mortality across Canada’s provinces and territories and also compared the mortality rates against infection rates, infection rates against vaccination rates and the morality rates against vaccination rates.
+								The data used in this project was obtained from the GitHub page of the <a href='https://opencovid.ca/' target="_blank">COVID-19 Canada Open Data Working Group</a>.</p>
+								<b><a href='https://github.com/ccodwg/Covid19Canada' target="_blank">COVID-19 Canada Open Data Working Group GitHub Page</a></p></b>
+								<p>The first step involved combining the required columns from the data tables in Microsoft SQL Server using views and join commands. Then the data was checked for duplicates and irrelevant data like ‘repatriated cases’ were removed. The SQL commands used, are shown below as well as the download link for the SQL script.</p>
+								<div class="image main"><img src="images/covid_canada_sql_script.png" alt="" />
+								<p><b><a href='/files/COVID-19_Canada_SQL_Script.sql' target="_blank">Download SQL Script</a></b></p>
+								<p>The new created table with the cleaned data was imported into Tableau Public to create the dashboard below. It compares the infection rates (percentage of population infected with COVID-19), mortality rates (percentage of deaths from infections) as well as the vaccination rates (percentage of population who received two doses of the COVID-19 vaccine) across provinces and territories. The dashboard also visualizes the timeline of infections against mortality, the rate of vaccinations per week, infection rate against vaccinations and mortality rate against vaccinations.</p>
+								<div class='tableauPlaceholder' id='viz1633201465459' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19CanadaFinal&#47;Covid-19Canada-VaccinationsDeathsandInfections&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Covid-19CanadaFinal&#47;Covid-19Canada-VaccinationsDeathsandInfections' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;Covid-19CanadaFinal&#47;Covid-19Canada-VaccinationsDeathsandInfections&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1633201465459');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.minHeight='2050px';vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+								<p><b><a href='https://public.tableau.com/shared/7JM223J73?:display_count=n&:origin=viz_share_link' target="_blank">View on Tableau Public</a></b></p>
+								<p>The visualized data shows that, as of the first week of July 2021, the Province of Quebec had the highest mortality rate in Canada, followed by Manitoba and New Brunswick, while Alberta had the highest infection rate. The territories led in the percentage of fully vaccinated populace, with Yukon coming in at first with 71.16% of its population receiving both doses of the COVID-19 vaccine. The comparison of the timeline of infection and mortality rates show that despite the higher number of infections in the second and third waves, the mortality rates were much lower across Canada, compared to the first wave. 
+									The visualization of infections and morality against vaccinations show a declining in the infection and mortality rates as the percentage of fully vaccinated populace gradually increased. 
+									</p>
+							</section>
+
+					</div>
+
+				<!-- Footer 
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>-->
+
+				<!-- Copyright 
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>-->
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
